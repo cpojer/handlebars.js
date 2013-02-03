@@ -116,7 +116,7 @@ if (!argv.simple) {
   } else if (argv.commonjs) {
     output.push('var Handlebars = require("' + argv.commonjs + '");');
   } else {
-    output.push('(function() {\n');
+    output.push('/// <reference path="Library/Handlebars.ts"/>\n(function() {\n');
   }
   output.push('  var template = Handlebars.template, templates = ');
   output.push(argv.namespace);
